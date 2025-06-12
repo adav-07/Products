@@ -8,6 +8,8 @@ public class StockValidator<T1, T2> : BaseCommandValidator<T1, T2>
 {
     public StockValidator()
     {
-        RuleFor(x => x.Stock).GreaterThanOrEqualTo(0).WithMessage("Stock Must Be >= 0");
+        RuleFor(x => x.Stock)
+            .GreaterThanOrEqualTo(0)
+            .WithMessage("Stock Must Be >= 0");
     }
 }
