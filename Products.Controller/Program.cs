@@ -16,7 +16,6 @@ public class Program
         builder.Services.AddDbContext<ProductDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-        var con = builder.Configuration.GetConnectionString("DefaultConnection");
         builder.Services.AddProductInfrastructure();
         builder.Services.AddProductApplication();
         builder.Services.AddControllers();
